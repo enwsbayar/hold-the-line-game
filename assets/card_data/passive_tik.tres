@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="CardData" format=3 uid="uid://q6071lb0xu0x"]
+
+[ext_resource type="Script" uid="uid://606lq18g3qc7" path="res://scripts/card_data.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://dtabtgji7ew6s" path="res://assets/tik.png" id="2"]
+
+[resource]
+script = ExtResource("1")
+card_name = "Lucky Draw"
+rarity = 1
+card_type = 1
+card_icon = ExtResource("2")
+passive_effect = 7
+weight = 50.0
+description = "Draw 2 extra cards."

@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://botdqiuodrhip"]
+
+[ext_resource type="Script" uid="uid://b2i3s42qfwd6m" path="res://scripts/battle.gd" id="1_dn72j"]
+[ext_resource type="PackedScene" path="res://scenes/character.tscn" id="2_th188"]
+
+[node name="Battle" type="Node2D" unique_id=1647988492]
+script = ExtResource("1_dn72j")
+
+[node name="Characters" parent="." unique_id=1426747621 instance=ExtResource("2_th188")]
+
+[node name="MapContainer" type="Node2D" parent="." unique_id=1778200637]

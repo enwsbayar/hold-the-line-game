@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="CharacterData" format=3 uid="uid://ufbinp4ibacj"]
+
+[ext_resource type="Script" uid="uid://dk8dbhuwh1m52" path="res://scripts/character_data.gd" id="1_c1lj5"]
+[ext_resource type="Texture2D" uid="uid://wlw3joiq458n" path="res://assets/char_14.png" id="2_2d8cc"]
+
+[resource]
+script = ExtResource("1_c1lj5")
+texture = ExtResource("2_2d8cc")
+rarity = 3
+max_hp = 255
+atk = 45
+spd = 2.0
+move_speed = 36.0

@@ -1,0 +1,18 @@
+# Godot
+.godot/
+*.translation
+
+# Export
+export/
+*.apk
+*.aab
+*.exe
+*.x86_64
+*.html
+*.js
+*.wasm
+*.pck
+
+# OS
+.DS_Store
+Thumbs.db

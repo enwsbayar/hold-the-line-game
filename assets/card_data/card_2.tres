@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="CardData" format=3 uid="uid://dngb8ink6kc1q"]
+
+[ext_resource type="Script" uid="uid://606lq18g3qc7" path="res://scripts/card_data.gd" id="1"]
+[ext_resource type="Resource" uid="uid://d2jat856qa28j" path="res://assets/enemy_data/char_2_data.tres" id="1_fk0st"]
+
+[resource]
+script = ExtResource("1")
+card_name = "Grena"
+character_data = ExtResource("1_fk0st")

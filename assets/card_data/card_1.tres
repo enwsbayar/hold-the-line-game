@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="CardData" format=3 uid="uid://cx2fgfq7sltw7"]
+
+[ext_resource type="Script" uid="uid://606lq18g3qc7" path="res://scripts/card_data.gd" id="1"]
+[ext_resource type="Resource" uid="uid://crlvle4n763jh" path="res://assets/enemy_data/char_1_data.tres" id="2"]
+
+[resource]
+script = ExtResource("1")
+card_name = "Panunu"
+character_data = ExtResource("2")

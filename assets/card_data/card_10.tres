@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="CardData" format=3 uid="uid://b34bclkhpyjce"]
+
+[ext_resource type="Resource" uid="uid://cl4ipxm3tpgvf" path="res://assets/enemy_data/char_10_data.tres" id="1_1cjfq"]
+[ext_resource type="Script" uid="uid://606lq18g3qc7" path="res://scripts/card_data.gd" id="2_7oot8"]
+
+[resource]
+script = ExtResource("2_7oot8")
+card_name = "Ballin"
+rarity = 2
+character_data = ExtResource("1_1cjfq")
+weight = 40.0
+metadata/_custom_type_script = "uid://606lq18g3qc7"

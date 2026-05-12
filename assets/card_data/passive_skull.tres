@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="CardData" format=3 uid="uid://dkuvlrf6s531x"]
+
+[ext_resource type="Script" uid="uid://606lq18g3qc7" path="res://scripts/card_data.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://1v7v5fijgc2v" path="res://assets/skull.png" id="2"]
+
+[resource]
+script = ExtResource("1")
+card_name = "Skull"
+rarity = 1
+card_type = 1
+card_icon = ExtResource("2")
+passive_effect = 5
+weight = 60.0
+description = "All allies gain +10% ATK."

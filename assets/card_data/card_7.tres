@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="CardData" format=3 uid="uid://cfctgx4nx82ks"]
+
+[ext_resource type="Resource" uid="uid://cbtcwhfd8li8o" path="res://assets/enemy_data/char_7_data.tres" id="1_lwj3a"]
+[ext_resource type="Script" uid="uid://606lq18g3qc7" path="res://scripts/card_data.gd" id="2_orgre"]
+
+[resource]
+script = ExtResource("2_orgre")
+card_name = "Diaback"
+rarity = 1
+character_data = ExtResource("1_lwj3a")
+description = "test des"

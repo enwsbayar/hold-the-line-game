@@ -1,0 +1,40 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="hold_the_line"
+run/main_scene="uid://cs0itk4d0qji5"
+config/features=PackedStringArray("4.6", "Mobile")
+boot_splash/use_filter=false
+boot_splash/image="uid://b8i3m61q7aen7"
+config/icon="uid://dwxjymoyipj8s"
+
+[autoload]
+
+MapManager="*res://scripts/map_manager.gd"
+SaveManager="*res://scripts/save_manager.gd"
+
+[display]
+
+window/size/viewport_width=480
+window/size/viewport_height=270
+window/size/mode=2
+window/stretch/mode="canvas_items"
+
+[physics]
+
+3d/physics_engine="Jolt Physics"
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0
+rendering_device/driver.windows="d3d12"
+renderer/rendering_method="mobile"

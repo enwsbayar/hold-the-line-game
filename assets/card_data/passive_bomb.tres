@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="CardData" format=3 uid="uid://kn683e22hac2"]
+
+[ext_resource type="Script" uid="uid://606lq18g3qc7" path="res://scripts/card_data.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://cawvecd7uvbt0" path="res://assets/bomb.png" id="2"]
+
+[resource]
+script = ExtResource("1")
+card_name = "Bomb"
+rarity = 1
+card_type = 1
+card_icon = ExtResource("2")
+passive_effect = 1
+weight = 60.0
+description = "Deal 10 damage to all enemies."

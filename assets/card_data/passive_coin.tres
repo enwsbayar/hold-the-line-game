@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="CardData" format=3 uid="uid://lo65gf32hac3"]
+
+[ext_resource type="Script" uid="uid://606lq18g3qc7" path="res://scripts/card_data.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://irtcid2b0i2q" path="res://assets/coin.png" id="2"]
+
+[resource]
+script = ExtResource("1")
+card_name = "Coin"
+rarity = 0
+card_type = 1
+card_icon = ExtResource("2")
+passive_effect = 2
+weight = 80.0
+description = "50% chance: +5% or -5% HP per ally."

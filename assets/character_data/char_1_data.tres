@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="CharacterData" format=3 uid="uid://bhlvnc2edg2vq"]
+
+[ext_resource type="Script" uid="uid://dk8dbhuwh1m52" path="res://scripts/character_data.gd" id="1_x6c0f"]
+[ext_resource type="Texture2D" uid="uid://ctskjs1reuoo8" path="res://assets/char_1.png" id="2_7lfbd"]
+
+[resource]
+script = ExtResource("1_x6c0f")
+texture = ExtResource("2_7lfbd")
+def = 3

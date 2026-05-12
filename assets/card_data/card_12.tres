@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="CardData" format=3 uid="uid://bw0fcbklx2eih"]
+
+[ext_resource type="Script" uid="uid://606lq18g3qc7" path="res://scripts/card_data.gd" id="1_bnqkn"]
+[ext_resource type="Resource" uid="uid://b3c4dis6ukivt" path="res://assets/enemy_data/char_12_data.tres" id="1_bw81m"]
+
+[resource]
+script = ExtResource("1_bnqkn")
+card_name = "Harnth"
+rarity = 2
+character_data = ExtResource("1_bw81m")
+weight = 40.0
+metadata/_custom_type_script = "uid://606lq18g3qc7"

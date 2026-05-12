@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="CardData" format=3 uid="uid://sb4wjv82hacy"]
+
+[ext_resource type="Script" uid="uid://606lq18g3qc7" path="res://scripts/card_data.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://b8gim4773k3l4" path="res://assets/x.png" id="2"]
+
+[resource]
+script = ExtResource("1")
+card_name = "Execute"
+rarity = 2
+card_type = 1
+card_icon = ExtResource("2")
+passive_effect = 8
+weight = 30.0
+description = "Instantly kill a random enemy."

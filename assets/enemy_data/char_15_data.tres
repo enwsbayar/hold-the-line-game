@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="CharacterData" format=3 uid="uid://whnp7urb103i"]
+
+[ext_resource type="Script" uid="uid://dk8dbhuwh1m52" path="res://scripts/character_data.gd" id="1_sv56y"]
+[ext_resource type="Texture2D" uid="uid://cbh4x387gkws6" path="res://assets/char_15.png" id="2_pd5p2"]
+
+[resource]
+script = ExtResource("1_sv56y")
+texture = ExtResource("2_pd5p2")
+rarity = 3
+max_hp = 680
+atk = 23
+def = 30
+spd = 0.6
+move_speed = 20.0

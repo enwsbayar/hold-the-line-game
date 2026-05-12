@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="CardData" format=3 uid="uid://c06dpss4tcuap"]
+
+[ext_resource type="Resource" uid="uid://whnp7urb103i" path="res://assets/enemy_data/char_15_data.tres" id="1_ge20d"]
+[ext_resource type="Script" uid="uid://606lq18g3qc7" path="res://scripts/card_data.gd" id="1_ms67c"]
+
+[resource]
+script = ExtResource("1_ms67c")
+card_name = "Buloy"
+rarity = 3
+character_data = ExtResource("1_ge20d")
+metadata/_custom_type_script = "uid://606lq18g3qc7"

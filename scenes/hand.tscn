@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://epl05cjgmhwd"]
+
+[ext_resource type="Script" uid="uid://d35ydxdjg8pin" path="res://scripts/hand.gd" id="1_eyfoh"]
+
+[node name="Hand" type="HBoxContainer" unique_id=2080132961]
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/separation = 30
+script = ExtResource("1_eyfoh")

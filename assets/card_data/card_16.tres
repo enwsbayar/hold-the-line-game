@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="CardData" format=3 uid="uid://ceis2nghnvq6e"]
+
+[ext_resource type="Script" uid="uid://606lq18g3qc7" path="res://scripts/card_data.gd" id="1_0vl23"]
+[ext_resource type="Resource" uid="uid://dgnwakp8sfw1t" path="res://assets/enemy_data/char_16_data.tres" id="1_wbom4"]
+
+[resource]
+script = ExtResource("1_0vl23")
+card_name = "Dinok"
+rarity = 3
+character_data = ExtResource("1_wbom4")
+metadata/_custom_type_script = "uid://606lq18g3qc7"

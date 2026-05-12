@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(Add-Type -AssemblyName WindowsBase; $zip = [System.IO.Packaging.Package]::Open\\(\"C:\\\\Users\\\\Bayar\\\\Desktop\\\\hold_the_line.docx\", [System.IO.FileMode]::Open, [System.IO.FileAccess]::Read\\); $part = $zip.GetPart\\([System.Uri]::new\\(\"/word/document.xml\", [System.UriKind]::Relative\\)\\); $stream = $part.GetStream\\(\\); $reader = [System.IO.StreamReader]::new\\($stream\\); $xml = $reader.ReadToEnd\\(\\); $reader.Close\\(\\); $zip.Close\\(\\); $xml = $xml -replace '<[^>]+>', ' '; $xml = $xml -replace '\\\\s+', ' '; $xml.Trim\\(\\))",
+      "PowerShell(Get-ChildItem \"C:\\\\Users\\\\Bayar\\\\Documents\\\\hold-the-line\" -Recurse -File | Where-Object { $_.Extension -notin @\\('.cache', '.md5', '.ctex', '.import', '.gdignore'\\) } | Select-Object FullName | Format-Table -AutoSize)",
+      "PowerShell(Get-ChildItem \"C:\\\\Users\\\\Bayar\\\\Desktop\\\\Godot\\\\hold-the-line\" -Recurse | Where-Object { $_.Extension -eq \".tscn\" } | Select-Object FullName)",
+      "PowerShell(cmd /c \"dir /a /s C:\\\\Users\\\\Bayar\\\\Desktop\\\\Godot\\\\hold-the-line\\\\scenes\")",
+      "PowerShell(cmd /c \"dir /a C:\\\\Users\\\\Bayar\\\\Desktop\\\\Godot\\\\hold-the-line\\\\assets\\\\enemy_data 2>&1\")",
+      "Bash(python3 *)",
+      "Bash(xxd \"C:/Users/Bayar/Desktop/Godot/hold-the-line/assets/enemy_data/char_13_data.tres\")",
+      "Bash(xxd \"C:/Users/Bayar/Desktop/Godot/hold-the-line/assets/enemy_data/char_14_data.tres\")"
+    ]
+  }
+}

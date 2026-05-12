@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="CardData" format=3 uid="uid://tey587rorpal"]
+
+[ext_resource type="Resource" uid="uid://gg6tiwn2cr04" path="res://assets/enemy_data/char_13_data.tres" id="1_ltk1j"]
+[ext_resource type="Script" uid="uid://606lq18g3qc7" path="res://scripts/card_data.gd" id="1_onwyt"]
+
+[resource]
+script = ExtResource("1_onwyt")
+card_name = "Drums"
+rarity = 3
+character_data = ExtResource("1_ltk1j")
+weight = 25.0
+metadata/_custom_type_script = "uid://606lq18g3qc7"

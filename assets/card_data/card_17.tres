@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="CardData" format=3 uid="uid://2i6rv6gj5k1n"]
+
+[ext_resource type="Script" uid="uid://606lq18g3qc7" path="res://scripts/card_data.gd" id="1_a63dr"]
+[ext_resource type="Resource" uid="uid://l0n3aqubjvct" path="res://assets/enemy_data/char_17_data.tres" id="1_cfahn"]
+
+[resource]
+script = ExtResource("1_a63dr")
+card_name = "AndroX"
+rarity = 4
+character_data = ExtResource("1_cfahn")
+metadata/_custom_type_script = "uid://606lq18g3qc7"

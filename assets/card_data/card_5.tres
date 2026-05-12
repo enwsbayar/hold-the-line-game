@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="CardData" format=3 uid="uid://cwtlugvqua7ic"]
+
+[ext_resource type="Script" uid="uid://606lq18g3qc7" path="res://scripts/card_data.gd" id="1"]
+[ext_resource type="Resource" uid="uid://cv16sshb1k2px" path="res://assets/enemy_data/char_5_data.tres" id="1_h4egi"]
+
+[resource]
+script = ExtResource("1")
+card_name = "Hotboy"
+rarity = 1
+character_data = ExtResource("1_h4egi")
+description = "test des"
+weight = 60.0

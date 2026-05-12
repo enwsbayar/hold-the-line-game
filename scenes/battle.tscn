@@ -1,0 +1,257 @@
+[gd_scene format=3 uid="uid://botdqiuodrhip"]
+
+[ext_resource type="Script" uid="uid://b2i3s42qfwd6m" path="res://scripts/battle.gd" id="1_dn72j"]
+[ext_resource type="PackedScene" uid="uid://epl05cjgmhwd" path="res://scenes/hand.tscn" id="2_th188"]
+[ext_resource type="FontFile" uid="uid://ddwd0ab1nra8c" path="res://fonts/m3x6.ttf" id="3_p1qf1"]
+
+[node name="Battle" type="Node2D" unique_id=1647988492]
+script = ExtResource("1_dn72j")
+
+[node name="MapContainer" type="Node2D" parent="." unique_id=1778200637]
+
+[node name="Characters" type="Node2D" parent="." unique_id=1393807372]
+y_sort_enabled = true
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=1622303622]
+
+[node name="DragLayer" type="Control" parent="UI" unique_id=1360517864 groups=["ui_layer"]]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Hand" parent="UI" unique_id=2080132961 instance=ExtResource("2_th188")]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -70.0
+offset_right = 20.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="WaveLabel" type="Label" parent="UI" unique_id=1766227874]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 23.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("3_p1qf1")
+theme_override_font_sizes/font_size = 16
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BonusLabel" type="Label" parent="UI" unique_id=1660769953]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_p1qf1")
+theme_override_font_sizes/font_size = 30
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="EnemyLabel" type="Label" parent="UI" unique_id=158543972]
+offset_left = 35.0
+offset_right = 115.0
+offset_bottom = 18.0
+theme_override_fonts/font = ExtResource("3_p1qf1")
+theme_override_font_sizes/font_size = 15
+text = "ENEMIES: 0"
+
+[node name="Tooltip" type="PanelContainer" parent="UI" unique_id=816714113]
+visible = false
+z_index = 10
+
+[node name="Content" type="VBoxContainer" parent="UI/Tooltip" unique_id=1556915806]
+layout_mode = 2
+theme_override_constants/separation = 1
+
+[node name="HPLine" type="Label" parent="UI/Tooltip/Content" unique_id=1128859286]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_p1qf1")
+theme_override_font_sizes/font_size = 9
+
+[node name="ATKLine" type="Label" parent="UI/Tooltip/Content" unique_id=421324493]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_p1qf1")
+theme_override_font_sizes/font_size = 9
+
+[node name="DEFLine" type="Label" parent="UI/Tooltip/Content" unique_id=1854433188]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_p1qf1")
+theme_override_font_sizes/font_size = 9
+
+[node name="SPDLine" type="Label" parent="UI/Tooltip/Content" unique_id=105283428]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_p1qf1")
+theme_override_font_sizes/font_size = 9
+
+[node name="WaveTransition" type="Control" parent="UI" unique_id=1203381149]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TransBG" type="ColorRect" parent="UI/WaveTransition" unique_id=1185552205]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.82)
+
+[node name="ClearedLabel" type="Label" parent="UI/WaveTransition" unique_id=2102808908]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -120.0
+offset_top = -60.0
+offset_right = 120.0
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 0.85, 0.1, 1)
+theme_override_fonts/font = ExtResource("3_p1qf1")
+theme_override_font_sizes/font_size = 26
+text = "WAVE 1 CLEARED!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BonusInfo" type="Label" parent="UI/WaveTransition" unique_id=2049645736]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -120.0
+offset_top = 14.0
+offset_right = 120.0
+offset_bottom = 54.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_p1qf1")
+theme_override_font_sizes/font_size = 14
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="IncomingLabel" type="Label" parent="UI/WaveTransition" unique_id=729175207]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -120.0
+offset_top = -30.0
+offset_right = 120.0
+offset_bottom = 30.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.9, 0.3, 0.3, 1)
+theme_override_fonts/font = ExtResource("3_p1qf1")
+theme_override_font_sizes/font_size = 22
+text = "WAVE 2 INCOMING..."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TopButtons" type="HBoxContainer" parent="UI" unique_id=1834598778]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -76.0
+offset_bottom = 18.0
+grow_horizontal = 0
+theme_override_constants/separation = 4
+
+[node name="CardsBtn" type="Button" parent="UI/TopButtons" unique_id=1667799443]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_p1qf1")
+theme_override_font_sizes/font_size = 10
+text = "CARDS"
+
+[node name="QuitBtn" type="Button" parent="UI/TopButtons" unique_id=1186673294]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_p1qf1")
+theme_override_font_sizes/font_size = 10
+text = "QUIT"
+
+[node name="CardsOverlay" type="Control" parent="UI" unique_id=920682018]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="OverlayBG" type="ColorRect" parent="UI/CardsOverlay" unique_id=1580026681]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.88)
+
+[node name="OverlayTopBar" type="HBoxContainer" parent="UI/CardsOverlay" unique_id=1096885237]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 24.0
+grow_horizontal = 2
+theme_override_constants/separation = 6
+
+[node name="CloseBtn" type="Button" parent="UI/CardsOverlay/OverlayTopBar" unique_id=1685838141]
+custom_minimum_size = Vector2(52, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_p1qf1")
+theme_override_font_sizes/font_size = 11
+text = "X CLOSE"
+
+[node name="OverlayTitle" type="Label" parent="UI/CardsOverlay/OverlayTopBar" unique_id=117196431]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("3_p1qf1")
+theme_override_font_sizes/font_size = 14
+text = "CARDS"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RightSpacer" type="Control" parent="UI/CardsOverlay/OverlayTopBar" unique_id=740528544]
+custom_minimum_size = Vector2(52, 0)
+layout_mode = 2
+
+[node name="OverlayScroll" type="ScrollContainer" parent="UI/CardsOverlay" unique_id=2003643402]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 24.0
+grow_horizontal = 2
+grow_vertical = 2

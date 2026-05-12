@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="CardData" format=3 uid="uid://dobj55nxf3n1h"]
+
+[ext_resource type="Script" uid="uid://606lq18g3qc7" path="res://scripts/card_data.gd" id="1_4764n"]
+[ext_resource type="Resource" uid="uid://byaob8ay33bt6" path="res://assets/enemy_data/char_20_data.tres" id="1_hotex"]
+
+[resource]
+script = ExtResource("1_4764n")
+card_name = "Onio"
+rarity = 4
+character_data = ExtResource("1_hotex")
+metadata/_custom_type_script = "uid://606lq18g3qc7"
