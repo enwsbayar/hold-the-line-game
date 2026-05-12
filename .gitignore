@@ -1,6 +1,7 @@
 # Godot
 .godot/
 *.translation
+*.import
 
 # Build output
 builds/
