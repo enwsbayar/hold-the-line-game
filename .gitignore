@@ -2,8 +2,11 @@
 .godot/
 *.translation
 
-# Export
+# Build output
+builds/
 export/
+
+# Binaries
 *.apk
 *.aab
 *.exe
@@ -12,6 +15,9 @@ export/
 *.js
 *.wasm
 *.pck
+
+# Claude
+.claude/
 
 # OS
 .DS_Store
