@@ -9,7 +9,7 @@ func _init() -> void:
 	_load_enemy_pool()
 
 func _load_enemy_pool() -> void:
-	for i in range(1, 99):
+	for i in range(2, 99):
 		var p := "res://assets/enemy_data/char_%d_data.tres" % i
 		if ResourceLoader.exists(p):
 			var res := load(p) as CharacterData

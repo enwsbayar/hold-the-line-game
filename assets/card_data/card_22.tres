@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="CardData" format=3 uid="uid://5s8t2kpiab6e"]
 
-[ext_resource type="Resource" uid="uid://lrt7xlyuqnk6" path="res://assets/character_data/char_22_data.tres" id="1_kfj4d"]
+[ext_resource type="Resource" uid="uid://lrt7xlyuqnk6" path="res://assets/enemy_data/char_22_data.tres" id="1_kfj4d"]
 [ext_resource type="Script" uid="uid://606lq18g3qc7" path="res://scripts/card_data.gd" id="2_yed7d"]
 
 [resource]
@@ -8,5 +8,5 @@ script = ExtResource("2_yed7d")
 card_name = "Luk'Cag"
 rarity = 4
 character_data = ExtResource("1_kfj4d")
-weight = 15.0
+weight = 2000.0
 metadata/_custom_type_script = "uid://606lq18g3qc7"

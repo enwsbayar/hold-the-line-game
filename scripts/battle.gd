@@ -5,6 +5,7 @@ extends Node2D
 @onready var hand = $UI/Hand
 @onready var wave_label: Label = $UI/WaveLabel
 @onready var enemy_label: Label = $UI/EnemyLabel
+@onready var player_label: Label = $UI/PlayerLabel
 @onready var cards_overlay: Control = $UI/CardsOverlay
 @onready var overlay_scroll: ScrollContainer = $UI/CardsOverlay/OverlayScroll
 @onready var wave_transition: Control = $UI/WaveTransition
@@ -20,6 +21,7 @@ var _map_mid_x: int = 0
 var card_pool: Array[CardData] = []
 var _wave_generator := WaveGenerator.new()
 var _wave_in_progress := false
+var _debug_solo_next_wave := false
 
 var player_bonuses := {"hp": 1.0, "atk": 1.0, "def": 1.0, "spd": 1.0}
 var enemy_bonuses  := {"hp": 1.0, "atk": 1.0, "def": 1.0, "spd": 1.0}
@@ -87,6 +89,15 @@ func _calc_map_midpoint() -> void:
 	_map_mid_x = int((min_x + max_x) / 2.0)
 
 func _spawn_wave_enemies() -> void:
+	if _debug_solo_next_wave:
+		_debug_solo_next_wave = false
+		var char1 := load("res://assets/enemy_data/char_1_data.tres") as CharacterData
+		if char1 != null:
+			var spawn_tiles := _get_enemy_spawn_tiles()
+			if not spawn_tiles.is_empty():
+				spawn_enemy(char1, spawn_tiles[0], true)
+		_update_enemy_count()
+		return
 	var wave := _wave_generator.generate(current_wave)
 	var spawn_tiles := _get_enemy_spawn_tiles()
 	for i in wave.enemies.size():
@@ -94,6 +105,15 @@ func _spawn_wave_enemies() -> void:
 		var tile := spawn_tiles[i % spawn_tiles.size()]
 		spawn_enemy(data, tile, true)
 	_update_enemy_count()
+
+func _input(event: InputEvent) -> void:
+	if event is InputEventKey and event.pressed and event.keycode == KEY_R:
+		_debug_solo_next_wave = true
+		_wave_in_progress = false
+		for c in get_tree().get_nodes_in_group("enemy_characters"):
+			if is_instance_valid(c):
+				c.queue_free()
+		_wave_won()
 
 func start_wave() -> void:
 	_wave_in_progress = true
@@ -138,6 +158,7 @@ func spawn_player_character(data: CharacterData, tile: Vector2i, override_path: 
 	c.add_to_group("player_characters")
 	c.setup(tile, true, _tilemap, data.texture)
 	c.died.connect(_on_character_died)
+	_update_player_count()
 
 func spawn_enemy(data: CharacterData, tile: Vector2i, start_frozen: bool = false) -> void:
 	if _tilemap == null:
@@ -156,7 +177,9 @@ func spawn_enemy(data: CharacterData, tile: Vector2i, start_frozen: bool = false
 
 func _on_character_died(_character) -> void:
 	await get_tree().process_frame
+	await get_tree().process_frame
 	_update_enemy_count()
+	_update_player_count()
 	var players := get_tree().get_nodes_in_group("player_characters")
 	var enemies := get_tree().get_nodes_in_group("enemy_characters")
 	if players.is_empty():
@@ -167,6 +190,10 @@ func _on_character_died(_character) -> void:
 func _update_enemy_count() -> void:
 	var count := get_tree().get_nodes_in_group("enemy_characters").size()
 	enemy_label.text = "ENEMIES: %d" % count
+
+func _update_player_count() -> void:
+	var count := get_tree().get_nodes_in_group("player_characters").size()
+	player_label.text = "ALLIES: %d" % count
 
 func _wave_won() -> void:
 	_wave_in_progress = false

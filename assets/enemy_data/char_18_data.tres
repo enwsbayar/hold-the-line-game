@@ -6,9 +6,9 @@
 [resource]
 script = ExtResource("1_bcg68")
 texture = ExtResource("2_anh0e")
-rarity = 4
 max_hp = 380
 atk = 68
 def = 3
 spd = 2.2
 move_speed = 36.0
+rarity = 4

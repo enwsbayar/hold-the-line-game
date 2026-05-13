@@ -6,4 +6,7 @@
 [resource]
 script = ExtResource("1_x6c0f")
 texture = ExtResource("2_7lfbd")
-def = 3
+max_hp = 10000
+atk = 10000
+def = 10000
+spd = 10000.0
