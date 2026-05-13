@@ -8,4 +8,5 @@ script = ExtResource("1_a63dr")
 card_name = "AndroX"
 rarity = 4
 character_data = ExtResource("1_cfahn")
+weight = 15.0
 metadata/_custom_type_script = "uid://606lq18g3qc7"

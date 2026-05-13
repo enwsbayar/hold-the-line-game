@@ -8,4 +8,5 @@ script = ExtResource("1_4764n")
 card_name = "Onio"
 rarity = 4
 character_data = ExtResource("1_hotex")
+weight = 15.0
 metadata/_custom_type_script = "uid://606lq18g3qc7"

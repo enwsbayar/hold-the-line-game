@@ -335,8 +335,10 @@ func _on_passive_played(effect: CardData.PassiveEffect, _value: float) -> void:
 				valid[randi() % valid.size()].call("take_damage", 99999)
 
 func _on_cards_btn_pressed() -> void:
-	CardsScreen.return_scene = "res://scenes/battle.tscn"
-	get_tree().change_scene_to_file("res://scenes/cards_screen.tscn")
+	if not _overlay_built:
+		_build_overlay_cards()
+		_overlay_built = true
+	cards_overlay.visible = true
 
 func _on_overlay_close_pressed() -> void:
 	cards_overlay.visible = false

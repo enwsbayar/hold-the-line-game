@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="CardData" format=3 uid="uid://bpisdhipb8vh7"]
+
+[ext_resource type="Resource" uid="uid://ddyxdaysrr3b2" path="res://assets/character_data/char_23_data.tres" id="1_i6qyi"]
+[ext_resource type="Script" uid="uid://606lq18g3qc7" path="res://scripts/card_data.gd" id="2_4nqf2"]
+
+[resource]
+script = ExtResource("2_4nqf2")
+card_name = "Nuno"
+rarity = 1
+character_data = ExtResource("1_i6qyi")
+weight = 80.0
+metadata/_custom_type_script = "uid://606lq18g3qc7"

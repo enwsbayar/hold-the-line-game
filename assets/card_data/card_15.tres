@@ -8,4 +8,5 @@ script = ExtResource("1_ms67c")
 card_name = "Buloy"
 rarity = 3
 character_data = ExtResource("1_ge20d")
+weight = 15.0
 metadata/_custom_type_script = "uid://606lq18g3qc7"

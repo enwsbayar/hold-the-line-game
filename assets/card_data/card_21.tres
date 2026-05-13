@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="CardData" format=3 uid="uid://52jbfwbaru18"]
+
+[ext_resource type="Resource" uid="uid://cseefa32urp65" path="res://assets/character_data/char_21_data.tres" id="1_ea025"]
+[ext_resource type="Script" uid="uid://606lq18g3qc7" path="res://scripts/card_data.gd" id="2_eo5or"]
+
+[resource]
+script = ExtResource("2_eo5or")
+card_name = "Iron Fist"
+rarity = 3
+character_data = ExtResource("1_ea025")
+weight = 25.0
+metadata/_custom_type_script = "uid://606lq18g3qc7"
